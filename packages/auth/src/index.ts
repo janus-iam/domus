@@ -1,37 +1,37 @@
-import { db } from "@janus/db";
+import { drizzleAdapter } from "@better-auth/drizzle-adapter/relations-v2";
+import type { Database } from "@janus/db";
 import * as schema from "@janus/db/schema/auth";
-import { env } from "@janus/env/server";
 import { betterAuth } from "better-auth";
-import { drizzleAdapter } from "better-auth/adapters/drizzle";
-import { genericOAuth, keycloak } from "better-auth/plugins";
 
-export const auth = betterAuth({
-  database: drizzleAdapter(db, {
-    provider: "pg",
+export type AuthConfig = {
+  BETTER_AUTH_URL: string;
+  BETTER_AUTH_SECRET: string;
+  CORS_ORIGIN: string;
+};
 
-    schema: schema,
-  }),
-  trustedOrigins: [env.CORS_ORIGIN],
-  emailAndPassword: {
-    enabled: true,
-  },
-  advanced: {
-    defaultCookieAttributes: {
-      sameSite: "none",
-      secure: true,
-      httpOnly: true,
-    },
-  },
-  plugins: [
-    genericOAuth({
-      config: [
-        keycloak({
-          clientId: env.KEYCLOAK_CLIENT_ID,
-          clientSecret: env.KEYCLOAK_CLIENT_SECRET,
-          issuer: env.KEYCLOAK_ISSUER,
-          pkce: true,
-        }),
-      ],
+export function createAuth(
+  env: AuthConfig,
+  database: Database,
+  desktopOrigins: readonly string[] = [],
+) {
+  return betterAuth({
+    database: drizzleAdapter(database, {
+      provider: "pg",
+      schema,
     }),
-  ],
-});
+    trustedOrigins: [env.CORS_ORIGIN, ...desktopOrigins],
+    emailAndPassword: { enabled: true },
+    secret: env.BETTER_AUTH_SECRET,
+    baseURL: env.BETTER_AUTH_URL,
+    advanced: {
+      defaultCookieAttributes: {
+        sameSite: "none",
+        secure: true,
+        httpOnly: true,
+      },
+    },
+    plugins: [],
+  });
+}
+
+export type Session = ReturnType<typeof createAuth>["$Infer"]["Session"];

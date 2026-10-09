@@ -1,5 +1,4 @@
 import { protectedProcedure, publicProcedure, router } from "../index";
-import { accountRouter } from "./account";
 
 export const appRouter = router({
   healthCheck: publicProcedure.query(() => {
@@ -11,6 +10,5 @@ export const appRouter = router({
       user: ctx.session.user,
     };
   }),
-  account: accountRouter,
 });
 export type AppRouter = typeof appRouter;

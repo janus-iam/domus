@@ -1,14 +1,11 @@
-import dotenv from "dotenv";
 import { defineConfig } from "drizzle-kit";
-
-dotenv.config({
-  path: "../../apps/server/.env",
-});
+import "varlock/auto-load";
 
 export default defineConfig({
-  schema: "./src/schema",
+  schema: "./src/schema/index.ts",
   out: "./src/migrations",
   dialect: "postgresql",
+  schemaFilter: ["public"],
   dbCredentials: {
     url: process.env.DATABASE_URL || "",
   },

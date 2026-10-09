@@ -1,3 +1,0 @@
-# Block crawlers from indexing this app (staging / authenticated UI).
-User-agent: *
-Disallow: /
