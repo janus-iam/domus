@@ -1,5 +1,5 @@
 {
-  "name": "@janus/auth",
+  "name": "@domus/auth",
   "type": "module",
   "exports": {
     ".": "./src/index.ts",
@@ -9,15 +9,15 @@
     "check-types": "tsc --noEmit"
   },
   "dependencies": {
-    "@better-auth/core": "1.7.7",
-    "@better-auth/drizzle-adapter": "1.7.7",
-    "@janus/db": "workspace:*",
+    "@better-auth/core": "1.7.12",
+    "@better-auth/drizzle-adapter": "1.7.12",
+    "@domus/db": "workspace:*",
     "better-auth": "catalog:",
     "drizzle-orm": "catalog:",
     "zod": "catalog:"
   },
   "devDependencies": {
-    "@janus/config": "workspace:*",
+    "@domus/config": "workspace:*",
     "typescript": "catalog:"
   }
 }

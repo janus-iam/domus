@@ -1,5 +1,5 @@
 {
-  "extends": "@janus/config/tsconfig.base.json",
+  "extends": "@domus/config/tsconfig.base.json",
   "compilerOptions": {
     "noEmit": true
   }

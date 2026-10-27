@@ -1,4 +1,4 @@
-# monorepo
+# domus
 
 This project was created with [Better-T-Stack](https://github.com/AmanVarshney01/create-better-t-stack), a modern TypeScript stack that combines React, TanStack Router, Hono, TRPC, and more.
 
@@ -66,7 +66,7 @@ npx shadcn@latest add accordion dialog popover sheet table -c packages/ui
 Import shared components like this:
 
 ```tsx
-import { Button } from "@janus/ui/components/button";
+import { Button } from "@domus/ui/components/button";
 ```
 
 ### Add app-specific blocks
@@ -88,7 +88,7 @@ Run standalone Node/Bun tools that use Varlock from the owning app directory so 
 ### Docker Compose
 
 - Target: web + server
-- Config: `docker-compose.yml` (app Containerfiles live in `apps/*/Containerfile`)
+- Config: `docker-compose.yml` (app Dockerfiles live in `apps/*/Dockerfile`)
 - Build images: bun run docker:build
 - Start: bun run docker:up
 - Logs: bun run docker:logs
@@ -105,7 +105,7 @@ For more details, see the guide on [Deploying with Docker Compose](https://www.b
 ## Project Structure
 
 ```
-monorepo/
+domus/
 ├── apps/
 │   ├── web/         # Frontend application (React + TanStack Router)
 │   └── server/      # Backend API (Hono, TRPC)

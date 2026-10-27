@@ -1,11 +1,11 @@
 {
-  "extends": "@janus/config/tsconfig.base.json",
+  "extends": "@domus/config/tsconfig.base.json",
   "compilerOptions": {
     "jsx": "react-jsx",
     "lib": ["ESNext", "DOM", "DOM.Iterable"],
     "types": [],
     "paths": {
-      "@janus/ui/*": ["./src/*"]
+      "@domus/ui/*": ["./src/*"]
     }
   },
   "include": ["src/**/*.ts", "src/**/*.tsx"],

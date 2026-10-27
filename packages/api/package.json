@@ -1,5 +1,5 @@
 {
-  "name": "@janus/api",
+  "name": "@domus/api",
   "type": "module",
   "exports": {
     ".": "./src/index.ts",
@@ -9,14 +9,14 @@
     "check-types": "tsc --noEmit"
   },
   "dependencies": {
-    "@janus/auth": "workspace:*",
-    "@janus/db": "workspace:*",
+    "@domus/auth": "workspace:*",
+    "@domus/db": "workspace:*",
     "@trpc/client": "catalog:",
     "@trpc/server": "catalog:",
     "zod": "catalog:"
   },
   "devDependencies": {
-    "@janus/config": "workspace:*",
+    "@domus/config": "workspace:*",
     "typescript": "catalog:"
   }
 }

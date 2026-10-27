@@ -1,5 +1,5 @@
 {
-  "name": "janus",
+  "name": "domus",
   "private": true,
   "workspaces": {
     "packages": [
@@ -9,20 +9,15 @@
     "catalog": {
       "zod": "^4.5.4",
       "typescript": "^6.0.3",
-      "@types/bun": "^1.4.2",
-      "varlock": "1.18.0",
-      "@trpc/server": "^11.18.0",
-      "better-auth": "1.7.7",
-      "lucide-react": "^1.41.0",
+      "@types/bun": "^1.4.3",
+      "varlock": "1.23.0",
+      "@trpc/server": "^11.19.0",
+      "better-auth": "1.7.12",
       "next-themes": "^0.4.6",
-      "react": "^19.2.8",
-      "react-dom": "^19.2.8",
       "sonner": "^2.0.8",
-      "@trpc/client": "^11.18.0",
-      "@types/react": "^19.2.18",
-      "@types/react-dom": "^19.2.7",
+      "@trpc/client": "^11.19.0",
       "tailwindcss": "^4.3.3",
-      "drizzle-orm": "1.0.0-rc.4"
+      "drizzle-orm": "1.0.0-rc.5"
     }
   },
   "type": "module",
@@ -32,10 +27,10 @@
     "check-types": "turbo run check-types",
     "dev:web": "turbo run dev -F web --",
     "dev:server": "turbo run dev -F server --",
-    "db:push": "turbo run db:push -F @janus/db --",
-    "db:studio": "turbo run db:studio -F @janus/db --",
-    "db:generate": "turbo run db:generate -F @janus/db --",
-    "db:migrate": "turbo run db:migrate -F @janus/db --",
+    "db:push": "turbo run db:push -F @domus/db --",
+    "db:studio": "turbo run db:studio -F @domus/db --",
+    "db:generate": "turbo run db:generate -F @domus/db --",
+    "db:migrate": "turbo run db:migrate -F @domus/db --",
     "db:start": "docker compose up -d postgres",
     "db:watch": "docker compose up postgres",
     "db:stop": "docker compose stop postgres",
@@ -53,13 +48,13 @@
     "zod": "catalog:"
   },
   "devDependencies": {
-    "@janus/config": "workspace:*",
+    "@domus/config": "workspace:*",
     "@types/bun": "catalog:",
-    "oxfmt": "^0.66.0",
-    "oxlint": "^1.81.0",
-    "turbo": "^2.10.12",
+    "oxfmt": "^0.74.0",
+    "oxlint": "^1.87.0",
+    "turbo": "^2.11.7",
     "typescript": "catalog:",
     "varlock": "catalog:"
   },
-  "packageManager": "bun@1.4.2"
+  "packageManager": "bun@1.4.4"
 }

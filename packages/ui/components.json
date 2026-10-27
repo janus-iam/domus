@@ -12,11 +12,11 @@
   },
   "iconLibrary": "lucide",
   "aliases": {
-    "components": "@janus/ui/components",
-    "utils": "@janus/ui/lib/utils",
-    "hooks": "@janus/ui/hooks",
-    "lib": "@janus/ui/lib",
-    "ui": "@janus/ui/components"
+    "components": "@domus/ui/components",
+    "utils": "@domus/ui/lib/utils",
+    "hooks": "@domus/ui/hooks",
+    "lib": "@domus/ui/lib",
+    "ui": "@domus/ui/components"
   },
   "menuColor": "default",
   "menuAccent": "subtle",

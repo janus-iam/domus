@@ -1,10 +1,10 @@
-name: monorepo
+name: domus
 
 services:
   web:
     build:
       context: .
-      dockerfile: apps/web/Containerfile
+      dockerfile: apps/web/Dockerfile
       secrets:
         - web_env
         - server_env
@@ -30,7 +30,7 @@ services:
   server:
     build:
       context: .
-      dockerfile: apps/server/Containerfile
+      dockerfile: apps/server/Dockerfile
       secrets:
         - web_env
         - server_env
@@ -42,7 +42,7 @@ services:
         required: false
     environment:
       CORS_ORIGIN: http://localhost:3001
-      DATABASE_URL: postgresql://postgres:${POSTGRES_PASSWORD:-password}@postgres:5432/monorepo
+      DATABASE_URL: postgresql://postgres:${POSTGRES_PASSWORD:-password}@postgres:5432/domus
     healthcheck:
       test:
         [
@@ -62,15 +62,15 @@ services:
 
   postgres:
     image: postgres:18
-    container_name: monorepo-postgres
+    container_name: domus-postgres
     environment:
-      POSTGRES_DB: monorepo
+      POSTGRES_DB: domus
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-password}
     ports:
       - "5432:5432"
     volumes:
-      - monorepo_postgres_data:/var/lib/postgresql
+      - domus_postgres_data:/var/lib/postgresql
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U postgres"]
       interval: 10s
@@ -79,7 +79,7 @@ services:
     restart: unless-stopped
 
 volumes:
-  monorepo_postgres_data:
+  domus_postgres_data:
 
 # BuildKit makes these available only while install/build commands run.
 secrets:

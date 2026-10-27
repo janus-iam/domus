@@ -1,6 +1,6 @@
 import { drizzleAdapter } from "@better-auth/drizzle-adapter/relations-v2";
-import type { Database } from "@janus/db";
-import * as schema from "@janus/db/schema/auth";
+import type { Database } from "@domus/db";
+import * as schema from "@domus/db/schema/auth";
 import { betterAuth } from "better-auth";
 
 export type AuthConfig = {

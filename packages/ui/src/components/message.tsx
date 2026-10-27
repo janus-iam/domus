@@ -1,4 +1,4 @@
-import { cn } from "@janus/ui/lib/utils";
+import { cn } from "@domus/ui/lib/utils";
 import * as React from "react";
 
 function MessageGroup({ className, ...props }: React.ComponentProps<"div">) {

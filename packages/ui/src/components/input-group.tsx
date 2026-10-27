@@ -1,9 +1,9 @@
 "use client";
 
-import { Button } from "@janus/ui/components/button";
-import { Input } from "@janus/ui/components/input";
-import { Textarea } from "@janus/ui/components/textarea";
-import { cn } from "@janus/ui/lib/utils";
+import { Button } from "@domus/ui/components/button";
+import { Input } from "@domus/ui/components/input";
+import { Textarea } from "@domus/ui/components/textarea";
+import { cn } from "@domus/ui/lib/utils";
 import { cva, type VariantProps } from "class-variance-authority";
 import * as React from "react";
 
