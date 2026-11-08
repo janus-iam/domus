@@ -9,7 +9,8 @@ import {
   DropdownMenuTrigger,
 } from "@domus/ui/components/dropdown-menu";
 import { Skeleton } from "@domus/ui/components/skeleton";
-import { Link, useNavigate } from "@tanstack/react-router";
+import { useNavigate } from "@tanstack/react-router";
+import { toast } from "sonner";
 
 import { authClient } from "@/lib/auth-client";
 
@@ -18,27 +19,53 @@ export default function UserMenu() {
   const { data: session, isPending } = authClient.useSession();
 
   if (isPending) {
-    return <Skeleton className="h-9 w-24" />;
+    return <Skeleton className="h-9 w-36" />;
   }
 
   if (!session) {
     return (
-      <Link to="/login">
-        <Button variant="outline">Sign In</Button>
-      </Link>
+      <Button
+        type="button"
+        variant="outline"
+        onClick={() => {
+          const origin = window.location.origin;
+          authClient.signIn.social(
+            {
+              provider: "keycloak",
+              callbackURL: `${origin}/dashboard`,
+              errorCallbackURL: origin,
+            },
+            {
+              onError: (error) => {
+                toast.error(error.error.message || error.error.statusText);
+              },
+            },
+          );
+        }}
+      >
+        Sign in with Janus
+      </Button>
     );
   }
+
+  const displayName = session.user.name || "Account";
 
   return (
     <DropdownMenu>
       <DropdownMenuTrigger render={<Button variant="outline" />}>
-        {session.user.name}
+        {displayName}
       </DropdownMenuTrigger>
-      <DropdownMenuContent className="bg-card">
+      <DropdownMenuContent align="end" className="bg-card min-w-48">
         <DropdownMenuGroup>
-          <DropdownMenuLabel>My Account</DropdownMenuLabel>
+          <DropdownMenuLabel className="font-normal">
+            <div className="flex flex-col gap-0.5">
+              <span className="font-medium">{displayName}</span>
+              <span className="text-muted-foreground text-xs">
+                {session.user.email || "No email"}
+              </span>
+            </div>
+          </DropdownMenuLabel>
           <DropdownMenuSeparator />
-          <DropdownMenuItem>{session.user.email}</DropdownMenuItem>
           <DropdownMenuItem
             variant="destructive"
             onClick={() => {
@@ -53,7 +80,7 @@ export default function UserMenu() {
               });
             }}
           >
-            Sign Out
+            Sign out
           </DropdownMenuItem>
         </DropdownMenuGroup>
       </DropdownMenuContent>
