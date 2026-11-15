@@ -33,6 +33,11 @@ export function createAuth(
           required: false,
           input: true,
         },
+        hash: {
+          type: "string",
+          required: false,
+          input: true,
+        },
       },
     },
     advanced: {
@@ -54,10 +59,11 @@ export function createAuth(
               overrideUserInfo: true,
             }),
             scopes: ["address", "microprofile-jwt", "phone", "picture", "plain_email"],
-            mapProfileToUser: (profile) => ({
+            mapProfileToUser: (profile) => (console.log(profile), {
               name: profile.username as string | undefined,
               image: profile.picture as string | undefined,
               plainEmail: profile.plain_email as string | undefined,
+              hash: profile.hash as string | undefined,
             }),
           },
         ],

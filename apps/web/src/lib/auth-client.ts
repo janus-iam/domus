@@ -22,6 +22,9 @@ export const authClient = createAuthClient({
         plainEmail: {
           type: "string",
         },
+        hash: {
+          type: "string",
+        },
       },
     }),
   ],
