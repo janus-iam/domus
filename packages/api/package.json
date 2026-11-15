@@ -9,10 +9,12 @@
     "check-types": "tsc --noEmit"
   },
   "dependencies": {
+    "@clickhouse/client": "^1.25.0",
     "@janus-iam/auth": "workspace:*",
     "@janus-iam/db": "workspace:*",
     "@trpc/client": "catalog:",
     "@trpc/server": "catalog:",
+    "drizzle-orm": "catalog:",
     "zod": "catalog:"
   },
   "devDependencies": {

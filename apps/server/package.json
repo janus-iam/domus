@@ -12,6 +12,7 @@
     "auth:generate": "varlock run -- bun x auth@latest generate --config src/services.ts --output ../../packages/db/src/schema/auth.ts --yes"
   },
   "dependencies": {
+    "@clickhouse/client": "^1.25.0",
     "@hono/trpc-server": "^0.4.2",
     "@janus-iam/api": "workspace:*",
     "@janus-iam/auth": "workspace:*",

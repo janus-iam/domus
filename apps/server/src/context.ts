@@ -1,8 +1,8 @@
 import type { Context as ApiContext } from "@janus-iam/api/context";
 import type { Context as HonoContext } from "hono";
 
-import { db } from "./services";
-import { auth } from "./services";
+import { ENV } from "./env.server";
+import { auth, clickhouse, db } from "./services";
 
 export type CreateContextOptions = {
   context: HonoContext;
@@ -15,6 +15,8 @@ export async function createContext({ context }: CreateContextOptions): Promise<
   return {
     db,
     session,
+    clickhouse,
+    clickhouseEventsTable: ENV.CLICKHOUSE_EVENTS_TABLE,
   };
 }
 
