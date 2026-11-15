@@ -1,4 +1,4 @@
-import { Button } from "@domus/ui/components/button";
+import { Button } from "@janus-iam/ui/components/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -7,8 +7,8 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@domus/ui/components/dropdown-menu";
-import { Skeleton } from "@domus/ui/components/skeleton";
+} from "@janus-iam/ui/components/dropdown-menu";
+import { Skeleton } from "@janus-iam/ui/components/skeleton";
 import { useNavigate } from "@tanstack/react-router";
 import { toast } from "sonner";
 

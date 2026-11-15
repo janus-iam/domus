@@ -1,4 +1,4 @@
-name: domus
+name: janus-iam-domus
 
 services:
   web:
@@ -62,7 +62,7 @@ services:
 
   postgres:
     image: postgres:18
-    container_name: domus-postgres
+    container_name: janus-iam-domus-postgres
     environment:
       POSTGRES_DB: domus
       POSTGRES_USER: postgres
@@ -70,7 +70,7 @@ services:
     ports:
       - "5432:5432"
     volumes:
-      - domus_postgres_data:/var/lib/postgresql
+      - janus_iam_domus_postgres_data:/var/lib/postgresql
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U postgres"]
       interval: 10s
@@ -79,7 +79,7 @@ services:
     restart: unless-stopped
 
 volumes:
-  domus_postgres_data:
+  janus_iam_domus_postgres_data:
 
 # BuildKit makes these available only while install/build commands run.
 secrets:

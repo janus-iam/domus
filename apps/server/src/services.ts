@@ -1,5 +1,5 @@
-import { createAuth } from "@domus/auth";
-import { createDb } from "@domus/db";
+import { createAuth } from "@janus-iam/auth";
+import { createDb } from "@janus-iam/db";
 
 import { ENV } from "./env.server";
 

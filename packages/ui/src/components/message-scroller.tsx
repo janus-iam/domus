@@ -1,7 +1,7 @@
 "use client";
 
-import { Button } from "@domus/ui/components/button";
-import { cn } from "@domus/ui/lib/utils";
+import { Button } from "@janus-iam/ui/components/button";
+import { cn } from "@janus-iam/ui/lib/utils";
 import {
   MessageScroller as MessageScrollerPrimitive,
   useMessageScroller,

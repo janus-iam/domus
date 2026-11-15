@@ -1,5 +1,5 @@
 {
-  "name": "domus",
+  "name": "@janus-iam/domus",
   "private": true,
   "workspaces": {
     "packages": [
@@ -27,10 +27,10 @@
     "check-types": "turbo run check-types",
     "dev:web": "turbo run dev -F web --",
     "dev:server": "turbo run dev -F server --",
-    "db:push": "turbo run db:push -F @domus/db --",
-    "db:studio": "turbo run db:studio -F @domus/db --",
-    "db:generate": "turbo run db:generate -F @domus/db --",
-    "db:migrate": "turbo run db:migrate -F @domus/db --",
+    "db:push": "turbo run db:push -F @janus-iam/db --",
+    "db:studio": "turbo run db:studio -F @janus-iam/db --",
+    "db:generate": "turbo run db:generate -F @janus-iam/db --",
+    "db:migrate": "turbo run db:migrate -F @janus-iam/db --",
     "db:start": "docker compose up -d postgres",
     "db:watch": "docker compose up postgres",
     "db:stop": "docker compose stop postgres",
@@ -48,7 +48,7 @@
     "zod": "catalog:"
   },
   "devDependencies": {
-    "@domus/config": "workspace:*",
+    "@janus-iam/config": "workspace:*",
     "@types/bun": "catalog:",
     "oxfmt": "^0.74.0",
     "oxlint": "^1.87.0",

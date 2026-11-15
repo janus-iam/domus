@@ -1,5 +1,5 @@
 {
-  "name": "@domus/db",
+  "name": "@janus-iam/db",
   "type": "module",
   "exports": {
     ".": "./src/index.ts",
@@ -19,7 +19,7 @@
     "zod": "catalog:"
   },
   "devDependencies": {
-    "@domus/config": "workspace:*",
+    "@janus-iam/config": "workspace:*",
     "@types/pg": "^8.23.1",
     "drizzle-kit": "1.0.0-rc.5",
     "typescript": "catalog:",

@@ -5,7 +5,7 @@
 
 # Better-T-Stack Project Rules
 
-This is a domus project created with Better-T-Stack CLI.
+This is a janus-iam/domus project created with Better-T-Stack CLI.
 
 ## Project Structure
 

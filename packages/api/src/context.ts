@@ -1,5 +1,5 @@
-import type { Session } from "@domus/auth";
-import type { Database } from "@domus/db";
+import type { Session } from "@janus-iam/auth";
+import type { Database } from "@janus-iam/db";
 
 export type Context = {
   session: Session | null;

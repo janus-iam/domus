@@ -1,4 +1,4 @@
-import type { Context as ApiContext } from "@domus/api/context";
+import type { Context as ApiContext } from "@janus-iam/api/context";
 import type { Context as HonoContext } from "hono";
 
 import { db } from "./services";

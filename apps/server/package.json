@@ -13,9 +13,9 @@
   },
   "dependencies": {
     "@hono/trpc-server": "^0.4.2",
-    "@domus/api": "workspace:*",
-    "@domus/auth": "workspace:*",
-    "@domus/db": "workspace:*",
+    "@janus-iam/api": "workspace:*",
+    "@janus-iam/auth": "workspace:*",
+    "@janus-iam/db": "workspace:*",
     "@trpc/server": "catalog:",
     "better-auth": "catalog:",
     "hono": "^4.13.7",
@@ -23,7 +23,7 @@
     "zod": "catalog:"
   },
   "devDependencies": {
-    "@domus/config": "workspace:*",
+    "@janus-iam/config": "workspace:*",
     "@types/bun": "catalog:",
     "tsdown": "^0.23.0",
     "typescript": "catalog:"

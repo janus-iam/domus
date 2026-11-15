@@ -1,4 +1,4 @@
-# domus
+# @janus-iam/domus
 
 This project was created with [Better-T-Stack](https://github.com/AmanVarshney01/create-better-t-stack), a modern TypeScript stack that combines React, TanStack Router, Hono, TRPC, and more.
 
@@ -66,7 +66,7 @@ npx shadcn@latest add accordion dialog popover sheet table -c packages/ui
 Import shared components like this:
 
 ```tsx
-import { Button } from "@domus/ui/components/button";
+import { Button } from "@janus-iam/ui/components/button";
 ```
 
 ### Add app-specific blocks
@@ -105,7 +105,7 @@ For more details, see the guide on [Deploying with Docker Compose](https://www.b
 ## Project Structure
 
 ```
-domus/
+janus-iam/domus/
 ├── apps/
 │   ├── web/         # Frontend application (React + TanStack Router)
 │   └── server/      # Backend API (Hono, TRPC)

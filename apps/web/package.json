@@ -12,8 +12,8 @@
     "env:generate": "varlock codegen"
   },
   "dependencies": {
-    "@domus/api": "workspace:*",
-    "@domus/ui": "workspace:*",
+    "@janus-iam/api": "workspace:*",
+    "@janus-iam/ui": "workspace:*",
     "@tailwindcss/vite": "^4.3.3",
     "@tanstack/react-form": "^1.33.5",
     "@tanstack/react-query": "^5.104.2",
@@ -32,7 +32,7 @@
     "zod": "catalog:"
   },
   "devDependencies": {
-    "@domus/config": "workspace:*",
+    "@janus-iam/config": "workspace:*",
     "@tanstack/react-query-devtools": "^5.104.2",
     "@tanstack/react-router-devtools": "^1.167.2",
     "@tanstack/router-plugin": "^1.168.45",

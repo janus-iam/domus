@@ -6,6 +6,6 @@ export default defineConfig({
   outDir: "./dist",
   clean: true,
   deps: {
-    alwaysBundle: [/@domus\/.*/],
+    alwaysBundle: [/@janus-iam\/.*/],
   },
 });

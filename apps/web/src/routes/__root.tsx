@@ -1,4 +1,4 @@
-import { Toaster } from "@domus/ui/components/sonner";
+import { Toaster } from "@janus-iam/ui/components/sonner";
 import type { QueryClient } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import { HeadContent, Outlet, createRootRouteWithContext } from "@tanstack/react-router";
@@ -20,11 +20,11 @@ export const Route = createRootRouteWithContext<RouterAppContext>()({
   head: () => ({
     meta: [
       {
-        title: "domus",
+        title: "Janus Domus",
       },
       {
         name: "description",
-        content: "domus is a web application",
+        content: "Janus Domus is a web application",
       },
     ],
     links: [

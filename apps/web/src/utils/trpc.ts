@@ -1,4 +1,4 @@
-import type { AppRouter } from "@domus/api/routers/index";
+import type { AppRouter } from "@janus-iam/api/routers/index";
 import { QueryCache, QueryClient } from "@tanstack/react-query";
 import { createTRPCClient, httpBatchLink } from "@trpc/client";
 import { createTRPCOptionsProxy } from "@trpc/tanstack-react-query";

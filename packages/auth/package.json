@@ -1,5 +1,5 @@
 {
-  "name": "@domus/auth",
+  "name": "@janus-iam/auth",
   "type": "module",
   "exports": {
     ".": "./src/index.ts",
@@ -11,13 +11,13 @@
   "dependencies": {
     "@better-auth/core": "1.7.12",
     "@better-auth/drizzle-adapter": "1.7.12",
-    "@domus/db": "workspace:*",
+    "@janus-iam/db": "workspace:*",
     "better-auth": "catalog:",
     "drizzle-orm": "catalog:",
     "zod": "catalog:"
   },
   "devDependencies": {
-    "@domus/config": "workspace:*",
+    "@janus-iam/config": "workspace:*",
     "typescript": "catalog:"
   }
 }
