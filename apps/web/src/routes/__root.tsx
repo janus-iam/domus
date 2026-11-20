@@ -8,6 +8,7 @@ import Header from "@/components/header";
 import { ThemeProvider } from "@/components/theme-provider";
 import type { trpc } from "@/utils/trpc";
 
+import "allo-font";
 import "../index.css";
 
 export interface RouterAppContext {
