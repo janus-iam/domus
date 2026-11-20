@@ -52,6 +52,7 @@
         "@trpc/server": "catalog:",
         "@trpc/tanstack-react-query": "^11.19.0",
         "@varlock/vite-integration": "1.5.4",
+        "allo-font": "^1.0.3",
         "better-auth": "catalog:",
         "lucide-react": "^1.56.0",
         "next-themes": "catalog:",
@@ -601,6 +602,8 @@
     "ajv": ["ajv@8.20.0", "", { "dependencies": { "fast-deep-equal": "^3.1.3", "fast-uri": "^3.0.1", "json-schema-traverse": "^1.0.0", "require-from-string": "^2.0.2" } }, "sha512-Thbli+OlOj+iMPYFBVBfJ3OmCAnaSyNn4M1vz9T6Gka5Jt9ba/HIR56joy65tY6kx/FCF5VXNB819Y7/GUrBGA=="],
 
     "ajv-formats": ["ajv-formats@2.1.1", "", { "dependencies": { "ajv": "^8.0.0" } }, "sha512-Wx0Kx52hxE7C18hkMEggYlEifqWZtYaRgouJor+WMdPnQyEK13vgEWyVNup7SoeeoLMsr4kf5h6dOW11I15MUA=="],
+
+    "allo-font": ["allo-font@1.0.3", "", {}, "sha512-h1u1ukonlmfTYSRc+MPvrjJU/p12A5xmzXIw5YQXf1/VGNi00cnPJfTf1AxYZOHzXRxK2pBLV7GgxtOm7/f+DQ=="],
 
     "ansi-colors": ["ansi-colors@4.1.3", "", {}, "sha512-/6w/C21Pm1A7aZitlI5Ni/2J6FFQN8i1Cvz3kHABAAbw93v/NlvKdVOqz7CCWz/3iv/JplRSEEZ83XION15ovw=="],
 
