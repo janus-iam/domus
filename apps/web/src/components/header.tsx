@@ -9,6 +9,7 @@ export default function Header() {
     { to: "/dashboard", label: "Dashboard" },
     { to: "/events", label: "Events" },
     { to: "/signature", label: "Signature" },
+    { to: "/profile", label: "Profile" },
   ] as const;
 
   return (
